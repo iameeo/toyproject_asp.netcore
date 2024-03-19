@@ -1,0 +1,77 @@
+{
+  "Version": 1,
+  "Hash": "qVhSTtuqJeotsiHYSk+ci35CDDhWyQdwL6nVxqULBbY=",
+  "Source": "ToyProject",
+  "BasePath": "_content/ToyProject",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "ToyProject\\wwwroot",
+      "Source": "ToyProject",
+      "ContentRoot": "C:\\Users\\user\\source\\repos\\ToyProject\\wwwroot\\",
+      "BasePath": "_content/ToyProject",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\user\\source\\repos\\ToyProject\\wwwroot\\css\\site.css",
+      "SourceId": "ToyProject",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\user\\source\\repos\\ToyProject\\wwwroot\\",
+      "BasePath": "_content/ToyProject",
+      "RelativePath": "css/site.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\site.css"
+    },
+    {
+      "Identity": "C:\\Users\\user\\source\\repos\\ToyProject\\wwwroot\\js\\site.js",
+      "SourceId": "ToyProject",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\user\\source\\repos\\ToyProject\\wwwroot\\",
+      "BasePath": "_content/ToyProject",
+      "RelativePath": "js/site.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\site.js"
+    },
+    {
+      "Identity": "C:\\Users\\user\\source\\repos\\ToyProject\\wwwroot\\lib\\jquery\\jquery.min.js",
+      "SourceId": "ToyProject",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\user\\source\\repos\\ToyProject\\wwwroot\\",
+      "BasePath": "_content/ToyProject",
+      "RelativePath": "lib/jquery/jquery.min.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\lib\\jquery\\jquery.min.js"
+    }
+  ]
+}
