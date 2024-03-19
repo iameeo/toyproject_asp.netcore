@@ -1,6 +1,12 @@
+using Microsoft.EntityFrameworkCore;
+using ToyProject.DBContext;
+
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllersWithViews().AddRazorRuntimeCompilation();
+
+// DB Context 
+builder.Services.AddDbContext<IameeoContext>(options => options.UseMySQL(builder.Configuration.GetConnectionString("IameeoDBConn")));
 
 var app = builder.Build();
 
