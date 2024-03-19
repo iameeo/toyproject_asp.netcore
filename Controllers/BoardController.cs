@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Rendering;
+﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using ToyProject.DBContext;
 using ToyProject.Models;
@@ -20,7 +15,7 @@ namespace ToyProject.Controllers
         // GET: Board
         public async Task<IActionResult> Index()
         {
-            return View(await _iameeoDB.Board.ToListAsync());
+            return View(await _iameeoDB.Boards.ToListAsync());
         }
 
         // GET: Board/Details/5
@@ -31,7 +26,7 @@ namespace ToyProject.Controllers
                 return NotFound();
             }
 
-            var board = await _iameeoDB.Board
+            var board = await _iameeoDB.Boards
                 .FirstOrDefaultAsync(m => m.Id == id);
             if (board == null)
             {
@@ -71,7 +66,7 @@ namespace ToyProject.Controllers
                 return NotFound();
             }
 
-            var board = await _iameeoDB.Board.FindAsync(id);
+            var board = await _iameeoDB.Boards.FindAsync(id);
             if (board == null)
             {
                 return NotFound();
@@ -122,7 +117,7 @@ namespace ToyProject.Controllers
                 return NotFound();
             }
 
-            var board = await _iameeoDB.Board
+            var board = await _iameeoDB.Boards
                 .FirstOrDefaultAsync(m => m.Id == id);
             if (board == null)
             {
@@ -137,10 +132,10 @@ namespace ToyProject.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var board = await _iameeoDB.Board.FindAsync(id);
+            var board = await _iameeoDB.Boards.FindAsync(id);
             if (board != null)
             {
-                _iameeoDB.Board.Remove(board);
+                _iameeoDB.Boards.Remove(board);
             }
 
             await _iameeoDB.SaveChangesAsync();
@@ -149,7 +144,7 @@ namespace ToyProject.Controllers
 
         private bool BoardExists(int id)
         {
-            return _iameeoDB.Board.Any(e => e.Id == id);
+            return _iameeoDB.Boards.Any(e => e.Id == id);
         }
     }
 }

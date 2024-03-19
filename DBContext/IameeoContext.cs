@@ -8,7 +8,8 @@ namespace ToyProject.DBContext
         public IameeoContext(DbContextOptions<IameeoContext> options) : base(options) { }
 
         #region property
-        public DbSet<Board> Board { get; set; }
+        public DbSet<Board> Boards { get; set; }
+        public DbSet<Notice> Notices { get; set; }
         #endregion
     }
 }
