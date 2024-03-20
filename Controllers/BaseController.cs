@@ -1,5 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using ToyProject.DBContext;
+using ToyProject.Data;
 
 namespace ToyProject.Controllers
 {

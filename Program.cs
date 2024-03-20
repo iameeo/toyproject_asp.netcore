@@ -1,5 +1,5 @@
 using Microsoft.EntityFrameworkCore;
-using ToyProject.DBContext;
+using ToyProject.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 

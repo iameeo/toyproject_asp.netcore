@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using ToyProject.DBContext;
+using ToyProject.Data;
 using ToyProject.Models;
 
 namespace ToyProject.Controllers
@@ -15,7 +15,7 @@ namespace ToyProject.Controllers
         // GET: Board
         public async Task<IActionResult> Index()
         {
-            return View(await _iameeoDB.Boards.ToListAsync());
+            return View(await _iameeoDB.Board.ToListAsync());
         }
 
         // GET: Board/Details/5
@@ -26,7 +26,7 @@ namespace ToyProject.Controllers
                 return NotFound();
             }
 
-            var board = await _iameeoDB.Boards
+            var board = await _iameeoDB.Board
                 .FirstOrDefaultAsync(m => m.Id == id);
             if (board == null)
             {
@@ -66,7 +66,7 @@ namespace ToyProject.Controllers
                 return NotFound();
             }
 
-            var board = await _iameeoDB.Boards.FindAsync(id);
+            var board = await _iameeoDB.Board.FindAsync(id);
             if (board == null)
             {
                 return NotFound();
@@ -117,7 +117,7 @@ namespace ToyProject.Controllers
                 return NotFound();
             }
 
-            var board = await _iameeoDB.Boards
+            var board = await _iameeoDB.Board
                 .FirstOrDefaultAsync(m => m.Id == id);
             if (board == null)
             {
@@ -132,10 +132,10 @@ namespace ToyProject.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var board = await _iameeoDB.Boards.FindAsync(id);
+            var board = await _iameeoDB.Board.FindAsync(id);
             if (board != null)
             {
-                _iameeoDB.Boards.Remove(board);
+                _iameeoDB.Board.Remove(board);
             }
 
             await _iameeoDB.SaveChangesAsync();
@@ -144,7 +144,7 @@ namespace ToyProject.Controllers
 
         private bool BoardExists(int id)
         {
-            return _iameeoDB.Boards.Any(e => e.Id == id);
+            return _iameeoDB.Board.Any(e => e.Id == id);
         }
     }
 }
