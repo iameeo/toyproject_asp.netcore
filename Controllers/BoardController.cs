@@ -51,6 +51,7 @@ namespace ToyProject.Controllers
         {
             if (ModelState.IsValid)
             {
+                board.Regdate = DateTime.Now;
                 _iameeoDB.Add(board);
                 await _iameeoDB.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
